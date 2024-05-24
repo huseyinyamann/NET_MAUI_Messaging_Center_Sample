@@ -25,5 +25,4 @@ namespace MessagingCenterSample
             await Navigation.PushAsync(new SendPage());
         }
     }
-
 }
