@@ -16,14 +16,13 @@ namespace MessagingCenterSample
         {
             MessagingCenter.Subscribe<Page, DateTime>(this, "tick", (p, datetime) =>
             {
-                // Handle the tick message here
-                // You can access the page using 'p' and datetime using 'datetime'
+                Messages.Add($"Messagge received at {datetime}");
             });
         }
-
-        private void Button_Clicked_1(object sender, EventArgs e)
+        //go to page
+        private async void Button_Clicked_1(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new SendPage());
         }
     }
 
