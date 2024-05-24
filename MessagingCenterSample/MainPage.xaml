@@ -9,7 +9,7 @@
             <Button Text="Subcribe" Clicked="Button_Clicked" />
             <Button Text="Go to Page" Clicked="Button_Clicked_1"/>
         </StackLayout>
-        <CollectionView>
+        <CollectionView ItemsSource="{Binding Messages}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Label Text="{Binding .}" />
